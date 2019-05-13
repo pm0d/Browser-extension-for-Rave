@@ -1,0 +1,179 @@
+/* Replace rave  logo */
+img.RaveIcon {
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: url("https://s2.gifyu.com/images/Webp.net-resizeimagedc7d9dffcb3b8cfa.gif");
+	background-size: cover;
+	background-repeat: no;
+	width: 120px;
+	height: 65px;
+	padding-left: 130px;
+	margin-top: 0px;
+}
+
+/* Add stars gif to image on homepage*/
+img.noresults-telescopeman {
+	background: url("http://cbimg9.com/graphics/08/08/57933c.gif") no-repeat;
+}
+
+/* Move feedback box to left */
+div.feedback-box {
+	left: 50px;
+	right: auto;
+	animation-name: colorchange;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+/* Apply gradient color to the navbar */
+.navbar,
+.viewed-cases .nav.nav-pills {
+	background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72) !important;
+}
+
+/* Stylethe  search box in navbar */
+.navbar input[type=text],
+.navbar input[type=search],
+.navbar #search-btn {
+	background-color: transparent !important;
+	color: white !important;
+	border: .5px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Set border color for navbar and tabs */
+.navbar-default,
+.nav-pills > li > a {
+	border-color: rgba(255, 255, 255, 0.1) !important; /* Set border color for navbar and tabs */
+}
+
+/* Set background color for active tabs */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover {
+	background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Make the onecloud icon background transparent */
+.onecloud-header-icon-disconnect {
+	background: transparent !important;
+	animation-name: colorshift;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+ul.nav.nav-tabs {
+	text-shadow: lightskyblue;
+}
+
+/* Style the proposed solution block */
+#proposed-solution {
+	background-color: azure !important;
+}
+
+/* Style  the service incident information */
+#service-incident {
+	background-color: lightskyblue !important;
+}
+
+/* Set width of all communicaton/case notes to 90% */
+/* 
+.case-history .col-sm-8 {
+	width: 90% !important;
+} */
+
+.chat-bubble-incoming,
+.chat-bubble-outgoing,
+.chat-bubble-misc {
+	width: 90% !important;
+}
+
+/* Set width of the email/notes form to 100% */
+.form-control {
+	width: 100%;
+}
+
+/* keyframes to cycle through colors */
+@keyframes colorchange {
+	0% {
+		background-color: cornflowerblue;
+	}
+	10% {
+		background-color: royalblue;
+	}
+	20% {
+		background-color: rebeccapurple;
+	}
+	30% {
+		background-color: slateblue;
+	}
+	40% {
+		background-color: teal;
+	}
+	50% {
+		background-color: forestgreen;
+	}
+	60% {
+		background-color: green;
+	}
+	70% {
+		background-color: darkgreen;
+	}
+	80% {
+		background-color: seagreen;
+	}
+	90% {
+		background-color: cadetblue;
+	}
+	100% {
+		background-color: darkolivegreen;
+	}
+}
+
+@keyframes colorshift {
+	0% {
+		color: #01796f;
+	}
+	10% {
+		color: #0b6623;
+	}
+	20% {
+		color: #2e8b57;
+	}
+	30% {
+		color: #00a86b;
+	}
+	40% {
+		color: #29ab87;
+	}
+	50% {
+		color: #00a572;
+	}
+	60% {
+		color: #679267;
+	}
+	70% {
+		color: #4f7942;
+	}
+	80% {
+		color: #3f704d;
+	}
+	90% {
+		color: #043927;
+	}
+	100% {
+		color: #01796f;
+	}
+}
+
+/*
+http://www.netanimations.net/Commercial-airliner-flying-through-the-clouds-animated-gif.gif
+http://bestanimations.com/Transport/Aircraft/Jets/Gulfstream-01-june.gif
+http://www.netanimations.net/volkswagon_5%20%284%29.gif
+http://www.netanimations.net/taxi_08%20(7).gif
+http://netanimations.net/spinning_globe_037.gif
+http://media.nbcbayarea.com/images/141*106/dscovr-epic-21-aug-2017-solar-eclipse-shadow.gif
+http://www.netanimations.net/Sparkling-animated-stars-flickering-in-sky.gif
+http://cbimg9.com/graphics/08/08/57933c.gif
+*/
