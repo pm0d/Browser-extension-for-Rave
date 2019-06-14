@@ -32,7 +32,7 @@ div.feedback-box {
 	background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72) !important;
 }
 
-/* Stylethe  search box in navbar */
+/* Style the  search box in navbar */
 .navbar input[type=text],
 .navbar input[type=search],
 .navbar #search-btn {
@@ -64,16 +64,35 @@ div.feedback-box {
 }
 
 ul.nav.nav-tabs {
-	text-shadow: lightskyblue;
+	text-shadow: lightskyblue !important;
+}
+
+.phonenumber-div {
+	background-color: white !important;
+}
+
+/* Make attachments show in single line ,
+div[ng-if="historyItem.ReopenItem"]
+*/
+div[ng-repeat="attachment in caseController.CaseAttachments track by $index"],
+div.attachment-container.ng-scope {
+	display: inline-block !important;
+}
+
+/* Set Z-index of the dropdown menu */
+div.dropdown-content.ng-scope {
+	z-index: 2 !important;
 }
 
 /* Style the proposed solution block */
 #proposed-solution {
+	display: none !important;
 	background-color: azure !important;
 }
 
 /* Style  the service incident information */
 #service-incident {
+	display: none !important;
 	background-color: lightskyblue !important;
 }
 
@@ -85,7 +104,9 @@ ul.nav.nav-tabs {
 
 .chat-bubble-incoming,
 .chat-bubble-outgoing,
-.chat-bubble-misc {
+.chat-bubble-misc,
+.chat-bubble-note,
+.reopen-bubble {
 	width: 90% !important;
 }
 
