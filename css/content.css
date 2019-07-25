@@ -1,16 +1,17 @@
 /* Replace rave  logo */
 /* img.RaveIcon {
-	display: block;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	background: url("https://s2.gifyu.com/images/Webp.net-resizeimagedc7d9dffcb3b8cfa.gif");
 	background-size: cover;
 	background-repeat: no;
 	width: 120px;
-	height: 65px;
+	height: 50px;
 	padding-left: 130px;
-	margin-top: 0px;
 } */
+
+/* Hide chevron near case number */
+i.glyphicon.glyphicon-chevron-right {
+	display: none
+}
 
 /* Add stars gif to image on homepage*/
 img.noresults-telescopeman {
@@ -21,7 +22,7 @@ img.noresults-telescopeman {
 div.feedback-box {
 	left: 50px;
 	right: auto;
-	animation-name: colorchange;
+	animation-name: bgcolorchange;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 }
@@ -43,63 +44,55 @@ div.feedback-box {
 
 /* Set border color for navbar and tabs */
 .navbar-default,
-.nav-pills > li > a {
-	border-color: rgba(255, 255, 255, 0.1) !important; /* Set border color for navbar and tabs */
+.nav-pills>li>a {
+	border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Set background color for active tabs */
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:focus,
-.nav-pills > li > a:focus,
-.nav-pills > li > a:hover {
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li>a:focus,
+.nav-pills>li>a:hover {
 	background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 /* Make the onecloud icon background transparent */
-.onecloud-header-icon-disconnect {
+.onecloud-header-icon {
 	background: transparent !important;
 }
 
-.phonenumber-div {
-	background-color: white !important;
-}
-
-/* Make attachments show in single line ,
-div[ng-if="historyItem.ReopenItem"]
-*/
+/* Make attachments show in single line , */
+/* div[ng-if="historyItem.ReopenItem"] */
 div[ng-repeat="attachment in caseController.CaseAttachments track by $index"],
 div.attachment-container.ng-scope {
 	display: inline-block !important;
 }
 
 /* Set Z-index of the dropdown menu */
-div.dropdown-content.ng-scope {
-	z-index: 2 !important;
+div.dropdown-content *{
+	z-index: 5 !important;
 }
 
 /* Style the proposed solution block */
-#proposed-solution {
-	display: none !important;
-	background-color: azure !important;
+#proposed-solution>div {
+	/* background-color: cornsilk; */
+	height: 250px;
 }
 
 /* Style  the service incident information */
 #service-incident {
-	display: none !important;
-	background-color: lightskyblue !important;
+	/* background-color: cornsilk; */
+	height: 250px;
 }
-
-/* Set width of all communicaton/case notes to 90% */
-/* 
-.case-history .col-sm-8 {
-	width: 90% !important;
-} */
 
 .chat-bubble-incoming,
 .chat-bubble-outgoing,
 .chat-bubble-misc,
 .chat-bubble-note,
-.reopen-bubble {
+.reopen-bubble,
+.diagnostic-bubble,
+.callmenow-bubble
+{
 	width: 90% !important;
 }
 
@@ -108,50 +101,68 @@ div.dropdown-content.ng-scope {
 	width: 100%;
 }
 
+/* Applying style to the Diamond icon */
+/* .ms-Icon-FullMDL--Diamond:before {
+	color: #004d7a !important;
+	animation-name: bgcolorchange;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+} */
+
+/* Setting the phone number background to white  */
+/* .phonenumber-div {
+	background-color: white !important;
+} */
+
+/* Set width of all communicaton/case notes to 90% */
+/* .case-history .col-sm-8 {
+	width: 90% !important;
+} */
+
+
 /* keyframes to cycle through colors */
-@keyframes colorchange {
+@keyframes bgcolorchange {
 	0% {
 		background-color: cornflowerblue;
 	}
+
 	10% {
 		background-color: royalblue;
 	}
+
 	20% {
 		background-color: rebeccapurple;
 	}
+
 	30% {
 		background-color: slateblue;
 	}
+
 	40% {
 		background-color: teal;
 	}
+
 	50% {
 		background-color: forestgreen;
 	}
+
 	60% {
 		background-color: green;
 	}
+
 	70% {
 		background-color: darkgreen;
 	}
+
 	80% {
 		background-color: seagreen;
 	}
+
 	90% {
 		background-color: cadetblue;
 	}
+
 	100% {
 		background-color: darkolivegreen;
 	}
 }
-
-/*
-http://www.netanimations.net/Commercial-airliner-flying-through-the-clouds-animated-gif.gif
-http://bestanimations.com/Transport/Aircraft/Jets/Gulfstream-01-june.gif
-http://www.netanimations.net/volkswagon_5%20%284%29.gif
-http://www.netanimations.net/taxi_08%20(7).gif
-http://netanimations.net/spinning_globe_037.gif
-http://media.nbcbayarea.com/images/141*106/dscovr-epic-21-aug-2017-solar-eclipse-shadow.gif
-http://www.netanimations.net/Sparkling-animated-stars-flickering-in-sky.gif
-http://cbimg9.com/graphics/08/08/57933c.gif
-*/
