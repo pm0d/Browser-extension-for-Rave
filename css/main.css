@@ -1,5 +1,5 @@
 /* Replace rave  logo */
-img.RaveIcon {
+/* img.RaveIcon {
 	display: block;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -10,7 +10,7 @@ img.RaveIcon {
 	height: 65px;
 	padding-left: 130px;
 	margin-top: 0px;
-}
+} */
 
 /* Add stars gif to image on homepage*/
 img.noresults-telescopeman {
@@ -58,13 +58,6 @@ div.feedback-box {
 /* Make the onecloud icon background transparent */
 .onecloud-header-icon-disconnect {
 	background: transparent !important;
-	animation-name: colorshift;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-}
-
-ul.nav.nav-tabs {
-	text-shadow: lightskyblue !important;
 }
 
 .phonenumber-div {
@@ -149,42 +142,6 @@ div.dropdown-content.ng-scope {
 	}
 	100% {
 		background-color: darkolivegreen;
-	}
-}
-
-@keyframes colorshift {
-	0% {
-		color: #01796f;
-	}
-	10% {
-		color: #0b6623;
-	}
-	20% {
-		color: #2e8b57;
-	}
-	30% {
-		color: #00a86b;
-	}
-	40% {
-		color: #29ab87;
-	}
-	50% {
-		color: #00a572;
-	}
-	60% {
-		color: #679267;
-	}
-	70% {
-		color: #4f7942;
-	}
-	80% {
-		color: #3f704d;
-	}
-	90% {
-		color: #043927;
-	}
-	100% {
-		color: #01796f;
 	}
 }
 

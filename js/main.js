@@ -1,5 +1,3 @@
-konamicode;
-
 window.onload = function() {
 	addtab();
 };

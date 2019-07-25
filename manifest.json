@@ -1,6 +1,5 @@
 {
 	"background": {
-		"persistent": false,
 		"scripts": [ "js/background.js" ]
 	},
 	"browser_action": {
@@ -21,6 +20,6 @@
 	},
 	"manifest_version": 2,
 	"name": "Rave",
-	"permissions": [ "tabs", "activeTab" ],
+	"permissions": [ "contextMenus", "tabs", "activeTab" ],
 	"version": "1.0"
 }
