@@ -1,6 +1,4 @@
-konamicode;
-
-window.onload = function() {
+window.onload = function () {
 	addtab();
 };
 
@@ -34,38 +32,36 @@ function addtab() {
 // Konami Code
 function konamicode() {
 	let cursor = 0;
-	const KONAMI_CODE = [ 38, 38, 40, 40, 37, 39, 37, 39, 66, 65 ];
+	const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 	document.addEventListener('keydown', (e) => {
 		cursor = e.keyCode == KONAMI_CODE[cursor] ? cursor + 1 : 0;
 		if (cursor == KONAMI_CODE.length) alert('⬆⬆⬇⬇⬅➡⬅➡🅱🅰');
 	});
 }
 
-/* function horzattachments() {
-	$('div.attachment-container').replaceWith(function() {
-		return '<span>' + $(this).html() + '</span>';
-	});
+function startTime() {
+	var today = new Date();
+	var h = today.getHours();
+	var m = today.getMinutes();
+	var s = today.getSeconds();
+	m = checkTime(m);
+	s = checkTime(s);
+	document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+	var t = setTimeout(startTime, 500);
+}
 
-	var spans;
-	var divs = document.getElementsByClassName('attachment-container.ng-scope');
-	{
-		for (var i = 0, l = divs.length; i < l; i++) {
-			spans[i] = divs[i].innerHTML;
-			divs[i].insertAdjacentElement('beforebegin', spans[i]);
-			divs[i].parentNode.removeChild(divs[i]);
-		}
-	}
-} */
+function checkTime(i) {
+	if (i < 10) {
+		i = '0' + i;
+	} // add zero in front of numbers < 10
+	return i;
+}
 
-// var image = document.getElementsByClassName('RaveIcon');
-// image.src = 'http://www.netanimations.net/taxi_08%20(7).gif';
+function blink() {
+	console.log('blink');
+	// document.body.style.cursor = 'wait';
+}
 
-/*	var elem = document.getElementById('navigation-home');
-	elem.parentNode.removeChild(elem); */
-
-/*	var elem1 = document.getElementsByClassName('panel-heading');
-	var elem2 = document.getElementById('breadcrumb-div');
-	elem1.appendChild(elem2); */
-
-/* var target = document.getElementById('breadcrumb-div');
-document.getElementById('companyinfo-tab').appendChild(target); */
+var i = setInterval(function () {
+	blink();
+}, 60 * 1000);
