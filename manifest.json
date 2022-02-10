@@ -11,7 +11,6 @@
       "css": ["css/content.css"],
       "js": ["js/jquery-3.3.1.slim.min.js", "js/content.js"],
       "matches": [
-        "https://beta.rave.office.net/*",
         "https://rave.office.net/*"
       ],
       "run_at": "document_idle"
@@ -24,5 +23,5 @@
   "manifest_version": 2,
   "name": "DJ Rave",
   "permissions": ["contextMenus", "tabs", "activeTab"],
-  "version": "3.2"
+  "version": "3.3"
 }

@@ -6,22 +6,22 @@ setTimeout(function () {
 	// Call function
 	togglepanels();
 
-	//! call function (deprecated)
+	//! call function
 	/* addLink(['https://docs.microsoft.com/en-us/sharepoint/support/online', 'https://supportability.visualstudio.com/SharePointOnline/_wiki/wikis']) */
 
 	// Call function 
-	hideElements(['#breadcrumb-div', '#leftPane', '#rightPane']);
+	hideElements(['#leftPane', '#rightPane']); //'#breadcrumb-div',
 	// /* '.sync-container' */
 
 	// moves the Add button to beside the call button
 	$("button[ng-href='editNumber']").appendTo("#contactPhone:parent");
 
 	// call function
-	konamicode();
+	// konamicode();
 
 	//! call function (deprecated)
 	// resizebox(['#proposed-solution > div', '#service-incident']);
-}, 5000);
+}, 3000);
 
 
 //
@@ -29,10 +29,10 @@ function hideElements(obj) {
 	try {
 		document.querySelector('.premier-agent-header-icon').addEventListener('click', function () {
 			for (var i = 0; i < obj.length; i++) {
-				if (document.querySelector([obj[i]]).style.display == "none") {
+				if (document.querySelector([obj[i]]).style.display == "hidden") {
 					document.querySelector([obj[i]]).style.display = "block";
 				} else {
-					document.querySelector([obj[i]]).style.display = "none";
+					document.querySelector([obj[i]]).style.display = "hidden";
 				}
 			}
 		});
@@ -46,10 +46,10 @@ function togglepanels() {
 	var panels = document.querySelectorAll('.panel-heading');
 	for (var i = 0; i < panels.length; i++) {
 		panels[i].addEventListener('click', function () {
-			if (this.parentElement.children[1].style.display == "none") {
+			if (this.parentElement.children[1].style.display == "hidden") {
 				this.parentElement.children[1].style.display = "block";
 			} else {
-				this.parentElement.children[1].style.display = "none";
+				this.parentElement.children[1].style.display = "hidden";
 			}
 		});
 	}
@@ -67,15 +67,26 @@ function addLink(links) {
 
 //
 function addLinks() {
+	var myMenu = document.createElement('li');
+	myMenu.className = 'dropdown';
+	myMenu.id = 'my-menu';
+	var mySubMenu = document.createElement('ul');
+	mySubMenu.className = 'dropdown-menu';
+	mySubMenu.id = 'my-submenu';
 	var myLink1 = document.createElement('li');
 	var myLink2 = document.createElement('li');
 	var myLink3 = document.createElement('li');
-	myLink1.innerHTML = "<div><a href='https://docs.microsoft.com/en-us/sharepoint/support/online' target='_blank'><span>SPO</span></a></div>";
-	myLink2.innerHTML = "<div><a href='https://supportability.visualstudio.com/SharePointOnline/_wiki/wikis' target='_blank'><span>CSS Wiki</span></a></div>";
-	myLink3.innerHTML = "<div><a href='https://www.hydra365.net/Nemo/QnASearch' target='_blank'><span>Cybot</span></a></div>";
-	document.getElementById('header-dropdown-menu').firstElementChild.appendChild(myLink1);
-	document.getElementById('header-dropdown-menu').firstElementChild.appendChild(myLink2);
-	document.getElementById('header-dropdown-menu').firstElementChild.appendChild(myLink3);
+	myMenu.innerHTML = '<a href="" ng-keydown="homeController.NavMenuOnKeyDown($event)" ng-blur="homeController.MenuItemOnBlur($event)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="ng-scope">Yammer</span><i class="ms-Icon-FullMDL ms-Icon-FullMDL--ChevronDown"></i></a>';
+	mySubMenu.innerHTML = '<ul class="dropdown-menu" aria-label="submenu"></ul>'
+	myLink1.innerHTML = "<a href='https://docs.microsoft.com/en-us/yammer/' target='_blank'>YammerDocs</a>";
+	myLink2.innerHTML = "<a href='https://developer.yammer.com/docs' target='_blank'>YammerDev</a>";
+	myLink3.innerHTML = "<div><a href='https://supportability.visualstudio.com/Yammer/_wiki/wikis' target='_blank'><span>YammerWiki</span></a></div>";	
+	document.getElementById('header-dropdown-menu').firstElementChild.appendChild(myMenu);
+	document.getElementById('my-menu').appendChild(mySubMenu);
+	document.getElementById('my-submenu').appendChild(myLink1);
+	document.getElementById('my-submenu').appendChild(myLink2);
+	document.getElementById('my-submenu').appendChild(myLink3);
+	document.querySelector('.whatsnew-header-icon').remove()
 	$('.whatsnew-header-icon').remove();
 };
 
@@ -89,14 +100,14 @@ function addTab() {
 };
 
 // Konami Code
-function konamicode() {
-	let cursor = 0;
-	const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-	document.addEventListener('keydown', (e) => {
-		cursor = e.keyCode == KONAMI_CODE[cursor] ? cursor + 1 : 0;
-		if (cursor == KONAMI_CODE.length) alert('Congrats, you found the Konami code.');
-	});
-};
+// function konamicode() {
+// 	let cursor = 0;
+// 	const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+// 	document.addEventListener('keydown', (e) => {
+// 		cursor = e.keyCode == KONAMI_CODE[cursor] ? cursor + 1 : 0;
+// 		if (cursor == KONAMI_CODE.length) alert('Congrats, you found the Konami code.');
+// 	});
+// };
 
 //
 chrome.runtime.onMessage.addListener(
@@ -105,10 +116,10 @@ chrome.runtime.onMessage.addListener(
 		// sendResponse({ farewell: "goodbye" });
 		// }
 
-		$("#search-box").focus(); // focus the search box
+		$("#odinSearchBox").focus(); // focus the search box #search-box
 		document.execCommand('selectAll', false); // Select all the text in the field
 		document.execCommand('insertText', false, request.casenumber); // Insert the case number
-		$("#search-btn").click();
+		$(".searchButton-114").children().click(); //$("#search-btn").click();
 	});
 
 // Minimize/maximize proposed solution & SIE

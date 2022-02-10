@@ -1,6 +1,6 @@
 /* Replace rave  logo */
 /* img.RaveIcon {
-	background: url("https://s2.gifyu.com/images/Webp.net-resizeimagedc7d9dffcb3b8cfa.gif");
+	background: url(".gif");
 	background-size: cover;
 	background-repeat: no;
 	width: 120px;
@@ -9,9 +9,9 @@
 } */
 
 /* Hide chevron near case number */
-i.glyphicon.glyphicon-chevron-right {
+/* i.glyphicon.glyphicon-chevron-right {
 	display: none
-}
+} */
 
 /* Add stars gif to image on homepage*/
 img.noresults-telescopeman {
@@ -20,11 +20,11 @@ img.noresults-telescopeman {
 
 /* Move feedback box to left */
 div.feedback-box {
-	left: 50px;
+	left: 55px;
 	right: auto;
-	animation-name: bgcolorchange;
+	/* animation-name: bgcolorchange;
 	animation-duration: 5s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite; */
 }
 
 /* Apply gradient color to the navbar */
@@ -63,19 +63,20 @@ div.feedback-box {
 
 /* Make attachments show in single line , */
 /* div[ng-if="historyItem.ReopenItem"] */
-div[ng-repeat="attachment in caseController.CaseAttachments track by $index"],
+/* div[ng-repeat="attachment in caseController.CaseAttachments track by $index"],
 div.attachment-container.ng-scope {
 	display: inline-block !important;
-}
+} */
 
 /* Set Z-index of the dropdown menu */
-div.dropdown-content *{
+/* div.dropdown-content *{
 	z-index: 5 !important;
-}
+} */
 
 /* Style the proposed solution block */
 #proposed-solution>div {
-	/* background-color: cornsilk; */
+	background-color: cornsilk;
+	overflow-y: scroll;
 	height: 250px;
 }
 
@@ -94,20 +95,18 @@ div.dropdown-content *{
 .callmenow-bubble
 {
 	width: 90% !important;
+	border: none !important;
 }
 
 /* Set width of the email/notes form to 100% */
-.form-control {
+/* .form-control {
 	width: 100%;
-}
+} */
 
 /* Applying style to the Diamond icon */
-/* .ms-Icon-FullMDL--Diamond:before {
-	color: #004d7a !important;
-	animation-name: bgcolorchange;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-} */
+.ms-Icon-FullMDL--Diamond {
+	background-color: transparent !important;
+}
 
 /* Setting the phone number background to white  */
 /* .phonenumber-div {
@@ -121,7 +120,7 @@ div.dropdown-content *{
 
 
 /* keyframes to cycle through colors */
-@keyframes bgcolorchange {
+/* @keyframes bgcolorchange {
 	0% {
 		background-color: cornflowerblue;
 	}
@@ -165,4 +164,4 @@ div.dropdown-content *{
 	100% {
 		background-color: darkolivegreen;
 	}
-}
+} */
