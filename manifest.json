@@ -11,17 +11,17 @@
       "css": ["css/content.css"],
       "js": ["js/jquery-3.3.1.slim.min.js", "js/content.js"],
       "matches": [
-        "https://rave.office.net/*"
+        "https://rave.microsoft.com/*"
       ],
       "run_at": "document_idle"
     }
   ],
-  "description": "Adds new logo, new theme, wide layout, context-menu search, helpful links, toggle panels, toggle proposed solution, fixes the Add button",
+  "description": "Rave with new theme, bigger scrollbar, wide layout, context-menu search, helpful links, toggle panels and much more",
   "icons": {
     "128": "img/favicon.png"
   },
   "manifest_version": 2,
   "name": "DJ Rave",
   "permissions": ["contextMenus", "tabs", "activeTab"],
-  "version": "3.3"
+  "version": "4.0"
 }

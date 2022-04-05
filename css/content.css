@@ -1,89 +1,148 @@
+/* Deprecated code */
 /* Replace rave  logo */
-/* img.RaveIcon {
-	background: url(".gif");
-	background-size: cover;
-	background-repeat: no;
-	width: 120px;
-	height: 50px;
-	padding-left: 130px;
-} */
-
 /* Hide chevron near case number */
-/* i.glyphicon.glyphicon-chevron-right {
-	display: none
-} */
-
-/* Add stars gif to image on homepage*/
-img.noresults-telescopeman {
-	background: url("http://cbimg9.com/graphics/08/08/57933c.gif") no-repeat;
-}
-
-/* Move feedback box to left */
-div.feedback-box {
-	left: 55px;
-	right: auto;
-	/* animation-name: bgcolorchange;
-	animation-duration: 5s;
-	animation-iteration-count: infinite; */
-}
-
-/* Apply gradient color to the navbar */
-.navbar,
-.viewed-cases .nav.nav-pills {
-	background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72) !important;
-}
-
-/* Style the  search box in navbar */
-.navbar input[type=text],
-.navbar input[type=search],
-.navbar #search-btn {
-	background-color: transparent !important;
-	color: white !important;
-	border: .5px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Set border color for navbar and tabs */
-.navbar-default,
-.nav-pills>li>a {
-	border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Set background color for active tabs */
-.nav-pills>li.active>a,
-.nav-pills>li.active>a:focus,
-.nav-pills>li>a:focus,
-.nav-pills>li>a:hover {
-	background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-/* Make the onecloud icon background transparent */
-.onecloud-header-icon {
-	background: transparent !important;
-}
-
+/* Setting the phone number background to white  */
+/* Set width of all communicaton/case notes to 90% */
+/* keyframes to cycle through colors */
 /* Make attachments show in single line , */
-/* div[ng-if="historyItem.ReopenItem"] */
-/* div[ng-repeat="attachment in caseController.CaseAttachments track by $index"],
-div.attachment-container.ng-scope {
-	display: inline-block !important;
+/* Set Z-index of the dropdown menu */
+/* Set width of the email/notes form to 100% */
+/* Style the  search box in navbar */
+/* Set border color for navbar and tabs */
+
+/* Add scrollbar to case summary */
+#caseSummaryScroll {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  height: 75vh !important;
+}
+
+/* Hide elements */
+.whatsnew-header-icon,
+.vertical-division,
+.top-bottom-nav,
+div.feedback-box {
+  display: none !important;
+}
+
+#react-editor {
+  background-color: #ffffff1c !important;
+  /* height: max-content !important; */
+}
+
+#breadcrumb * {
+  padding: 0px !important;
+  /* margin: 0px !important;  */
+  /* font-weight: 300 !important;
+  font-size: 21px !important; */
+  vertical-align: 0px !important;
+}
+
+/* .case-overview i {
+    color: #a5a5a5 !important;
+    font-size: 15px !important;
 } */
 
-/* Set Z-index of the dropdown menu */
-/* div.dropdown-content *{
-	z-index: 5 !important;
-} */
+.case-overview-info {
+  margin-right: 10px !important;
+}
+
+.case-overview {
+  align-items: center !important;
+}
 
 /* Style the proposed solution block */
-#proposed-solution>div {
-	background-color: cornsilk;
-	overflow-y: scroll;
-	height: 250px;
+#proposed-solution > div {
+  background-color: #ffffff1c !important;
+  overflow-y: auto;
+  height: 250px;
 }
 
 /* Style  the service incident information */
 #service-incident {
-	/* background-color: cornsilk; */
-	height: 250px;
+  /* background-color: cornsilk; */
+  overflow-y: auto;
+  height: 250px;
+}
+
+#customer-info .panel-body {
+  font-style: normal !important;
+  margin: inherit;
+  /* padding: inherit; */
+}
+
+#customer-info button,
+img {
+  display: none;
+}
+
+.quick-view-email {
+  text-overflow: none;
+  /* display: inline-block; */
+  max-width: 100% !important;
+  /* white-space: nowrap; */
+  overflow: visible !important;
+  /* vertical-align: bottom; */
+}
+
+.quickview-div {
+  margin-bottom: 0px !important;
+}
+
+.rct-clipboard-copy .clipboard-button {
+  visibility: visible !important;
+}
+
+.panel-body * {
+  border-style: none !important;
+}
+
+/* Remove the formatting on the email modality tag */
+.modality-email,
+.collab-breadcrumb,
+.modality-smc,
+.oed-badge {
+  background-color: var(--primaryColor) !important;
+  /* color: inherit !important;
+  font-size: inherit !important;
+  font-weight: normal !important; */
+  /* padding: "" !important; */
+}
+
+/* Style the scrollbar to make it more visible */
+#caseSummaryScroll::-webkit-scrollbar {
+  width: 20px !important;
+  /* background: hsla(0, 0%, 100%, 0.05) !important; */
+}
+
+body::-webkit-scrollbar-thumb {
+  /* border-radius: 10px; */
+  /* background-color: var(--primaryColor) !important; */
+  /* min-height: 40px !important; */
+  /* max-height: 40px !important; */
+}
+
+body::-webkit-scrollbar-track {
+  background: none !important;
+}
+
+/* Apply gradient color to the navbar
+.navbar,
+.viewed-cases .nav.nav-pills {
+	background-image: linear-gradient(to right, #051937, #004d7a, #008793) !important;
+} */
+
+/* Set background color for active tabs */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Make the onecloud icon background transparent */
+.onecloud-header-icon {
+  background: transparent !important;
 }
 
 .chat-bubble-incoming,
@@ -92,76 +151,17 @@ div.attachment-container.ng-scope {
 .chat-bubble-note,
 .reopen-bubble,
 .diagnostic-bubble,
-.callmenow-bubble
-{
-	width: 90% !important;
-	border: none !important;
+.callmenow-bubble {
+  width: 90% !important;
+  border: none !important;
 }
-
-/* Set width of the email/notes form to 100% */
-/* .form-control {
-	width: 100%;
-} */
 
 /* Applying style to the Diamond icon */
 .ms-Icon-FullMDL--Diamond {
-	background-color: transparent !important;
+  background-color: transparent !important;
 }
 
-/* Setting the phone number background to white  */
-/* .phonenumber-div {
-	background-color: white !important;
-} */
-
-/* Set width of all communicaton/case notes to 90% */
-/* .case-history .col-sm-8 {
-	width: 90% !important;
-} */
-
-
-/* keyframes to cycle through colors */
-/* @keyframes bgcolorchange {
-	0% {
-		background-color: cornflowerblue;
-	}
-
-	10% {
-		background-color: royalblue;
-	}
-
-	20% {
-		background-color: rebeccapurple;
-	}
-
-	30% {
-		background-color: slateblue;
-	}
-
-	40% {
-		background-color: teal;
-	}
-
-	50% {
-		background-color: forestgreen;
-	}
-
-	60% {
-		background-color: green;
-	}
-
-	70% {
-		background-color: darkgreen;
-	}
-
-	80% {
-		background-color: seagreen;
-	}
-
-	90% {
-		background-color: cadetblue;
-	}
-
-	100% {
-		background-color: darkolivegreen;
-	}
-} */
+/* Add stars gif to image on homepage*/
+img.noresults-telescopeman {
+  background: url("http://cbimg9.com/graphics/08/08/57933c.gif") no-repeat;
+}
