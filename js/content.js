@@ -6,7 +6,7 @@ setTimeout(function () {
   // hidePanes(["#leftPane", "#rightPane"]); //'#breadcrumb-div',	'.sync-container'
   // resizebox(['#proposed-solution > div', '#service-incident']);
   /* addLink(['https://docs.microsoft.com/en-us/sharepoint/support/online', 'https://supportability.visualstudio.com/SharePointOnline/_wiki/wikis']) */
-}, 10000);
+}, 5000);
 
 // Hide side panes
 function hidePanes(obj) {
