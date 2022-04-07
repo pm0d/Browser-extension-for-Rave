@@ -21,7 +21,9 @@
 .whatsnew-header-icon,
 .vertical-division,
 .top-bottom-nav,
-div.feedback-box {
+.customer-view-btn,
+div.feedback-box,
+div[ng-if="caseController.ShowViewMore()"] {
   display: none !important;
 }
 
@@ -32,9 +34,6 @@ div.feedback-box {
 
 #breadcrumb * {
   padding: 0px !important;
-  /* margin: 0px !important;  */
-  /* font-weight: 300 !important;
-  font-size: 21px !important; */
   vertical-align: 0px !important;
 }
 
@@ -51,38 +50,18 @@ div.feedback-box {
   align-items: center !important;
 }
 
-/* Style the proposed solution block */
+/* Add scrollbars to the proposed solution & service incident information */
+#service-incident,
 #proposed-solution > div {
   background-color: #ffffff1c !important;
   overflow-y: auto;
   height: 250px;
 }
 
-/* Style  the service incident information */
-#service-incident {
-  /* background-color: cornsilk; */
-  overflow-y: auto;
-  height: 250px;
-}
-
-#customer-info .panel-body {
-  font-style: normal !important;
-  margin: inherit;
-  /* padding: inherit; */
-}
-
-#customer-info button,
-img {
-  display: none;
-}
-
 .quick-view-email {
   text-overflow: none;
-  /* display: inline-block; */
   max-width: 100% !important;
-  /* white-space: nowrap; */
   overflow: visible !important;
-  /* vertical-align: bottom; */
 }
 
 .quickview-div {
@@ -93,20 +72,21 @@ img {
   visibility: visible !important;
 }
 
-.panel-body * {
+.customer-info-lookup-coachmark *,
+.panel-body *,
+.searchBarContainer-170 * {
   border-style: none !important;
+  box-shadow: none !important;  
 }
 
-/* Remove the formatting on the email modality tag */
+/* Remove the formatting on the tag */
 .modality-email,
 .collab-breadcrumb,
 .modality-smc,
-.oed-badge {
+.oed-badge,
+.preferred-breadcrumb {
   background-color: var(--primaryColor) !important;
-  /* color: inherit !important;
-  font-size: inherit !important;
-  font-weight: normal !important; */
-  /* padding: "" !important; */
+  font-weight: normal !important; 
 }
 
 /* Style the scrollbar to make it more visible */
@@ -115,22 +95,15 @@ img {
   /* background: hsla(0, 0%, 100%, 0.05) !important; */
 }
 
-body::-webkit-scrollbar-thumb {
-  /* border-radius: 10px; */
-  /* background-color: var(--primaryColor) !important; */
-  /* min-height: 40px !important; */
-  /* max-height: 40px !important; */
-}
-
 body::-webkit-scrollbar-track {
   background: none !important;
 }
 
-/* Apply gradient color to the navbar
+/* Apply gradient color to the navbar */
 .navbar,
 .viewed-cases .nav.nav-pills {
 	background-image: linear-gradient(to right, #051937, #004d7a, #008793) !important;
-} */
+}
 
 /* Set background color for active tabs */
 .nav-pills > li.active > a,
@@ -140,8 +113,9 @@ body::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Make the onecloud icon background transparent */
-.onecloud-header-icon {
+/* Make the onecloud & diamond icon background transparent */
+.onecloud-header-icon,
+.ms-Icon-FullMDL--Diamond {
   background: transparent !important;
 }
 
@@ -154,11 +128,6 @@ body::-webkit-scrollbar-track {
 .callmenow-bubble {
   width: 90% !important;
   border: none !important;
-}
-
-/* Applying style to the Diamond icon */
-.ms-Icon-FullMDL--Diamond {
-  background-color: transparent !important;
 }
 
 /* Add stars gif to image on homepage*/
