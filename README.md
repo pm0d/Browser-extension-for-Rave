@@ -1,5 +1,5 @@
 # Browser extension for Rave
-# Works with Microsoft Edge / Google Chrome
+## Works with Microsoft Edge / Google Chrome
 
 Here are the steps needed to sideload/install the extension:
 
