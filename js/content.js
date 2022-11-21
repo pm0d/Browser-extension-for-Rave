@@ -1,12 +1,14 @@
+addLinks();
+
 // Sets a timer
 setTimeout(function () {
-  togglepanels();
-  collapsepanels();
-  addLinks();
+  // togglepanels();
+  // collapsepanels();
+  // addLinks();
   // hidePanes(["#leftPane", "#rightPane"]); //'#breadcrumb-div',	'.sync-container'
   // resizebox(['#proposed-solution > div', '#service-incident']);
   /* addLink(['https://docs.microsoft.com/en-us/sharepoint/support/online', 'https://supportability.visualstudio.com/SharePointOnline/_wiki/wikis']) */
-}, 5000);
+}, 100);
 
 // Hide side panes
 function hidePanes(obj) {
@@ -32,7 +34,7 @@ function hidePanes(obj) {
           }
         }
       });
-  } catch (error) {}
+  } catch (error) { }
 }
 
 // hide panels on loading extension
@@ -83,12 +85,12 @@ function addLinks() {
   var myLink2 = document.createElement("li");
   var myLink3 = document.createElement("li");
   myMenu.innerHTML =
-    '<a href="" ng-keydown="homeController.NavMenuOnKeyDown($event)" ng-blur="homeController.MenuItemOnBlur($event)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="ng-scope">Yammer</span><i class="ms-Icon-FullMDL ms-Icon-FullMDL--ChevronDown"></i></a>';
+    '<a href="" ng-keydown="homeController.NavMenuOnKeyDown($event)" ng-blur="homeController.MenuItemOnBlur($event)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="ng-scope">ExchangeOnline</span><i class="ms-Icon-FullMDL ms-Icon-FullMDL--ChevronDown"></i></a>';
   mySubMenu.innerHTML = '<ul class="dropdown-menu" aria-label="submenu"></ul>';
   myLink1.innerHTML =
-    "<a href='https://docs.microsoft.com/en-us/yammer/' target='_blank'>YammerDocs</a>";
+    "<a href='https://dev.azure.com/Supportability/Modern%20Workplace/_wiki/wikis/Modern%20Workplace/81646/Exchange-Online' target='_blank'>Supportability Wiki</a>";
   myLink2.innerHTML =
-    "<a href='https://developer.yammer.com/docs' target='_blank'>YammerDev</a>";
+    "<a href='https://developer.yammer.com/docs' target='_blank'>ASC</a>";
   myLink3.innerHTML =
     "<div><a href='https://supportability.visualstudio.com/Yammer/_wiki/wikis' target='_blank'><span>YammerWiki</span></a></div>";
   document
@@ -102,10 +104,7 @@ function addLinks() {
 
 // Listen
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.message) {
-    togglepanels();
-    collapsepanels();
-  } else {
+  if (request.message) { } else if (request.casenumber) {
     $("#odinSearchBox").focus(); // focus the search box #search-box
     document.execCommand("selectAll", false); // Select all the text in the field
     document.execCommand("insertText", false, request.casenumber); // Insert the case number

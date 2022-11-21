@@ -9,6 +9,7 @@
 /* Set width of the email/notes form to 100% */
 /* Style the  search box in navbar */
 /* Set border color for navbar and tabs */
+/* Apply gradient color to the navbar */
 
 /* Add scrollbar to case summary */
 #caseSummaryScroll {
@@ -23,24 +24,30 @@
 .top-bottom-nav,
 .customer-view-btn,
 div.feedback-box,
-div[ng-if="caseController.ShowViewMore()"] {
+div[ng-if="caseController.ShowViewMore()"],
+.customer-info-lookup-coachmark,
+.missing-info-box,
+.quick-facts-badge {
   display: none !important;
 }
 
-#react-editor {
-  background-color: #ffffff1c !important;
-  /* height: max-content !important; */
-}
-
-#breadcrumb * {
-  padding: 0px !important;
-  vertical-align: 0px !important;
-}
-
-/* .case-overview i {
-    color: #a5a5a5 !important;
-    font-size: 15px !important;
+/* Reducing the margin in Actions panel */
+/* .ms-Stack {
+  margin-bottom: 0px !important;
 } */
+
+/* Removing the margin in troubleshooting panel */
+/* .form-group {
+  margin-bottom: 0px !important;
+} */
+
+/*  */
+
+
+/* moving side panels up */
+.aside {
+  top: 0px !important;
+}
 
 .case-overview-info {
   margin-right: 10px !important;
@@ -53,7 +60,7 @@ div[ng-if="caseController.ShowViewMore()"] {
 /* Add scrollbars to the proposed solution & service incident information */
 #service-incident,
 #proposed-solution > div {
-  background-color: #ffffff1c !important;
+  background-color: #0000000f !important;
   overflow-y: auto;
   height: 250px;
 }
@@ -85,7 +92,7 @@ div[ng-if="caseController.ShowViewMore()"] {
 .modality-smc,
 .oed-badge,
 .preferred-breadcrumb {
-  background-color: var(--primaryColor) !important;
+  background-color: var(--neutralSecondary) !important;
   font-weight: normal !important; 
 }
 
@@ -99,11 +106,11 @@ body::-webkit-scrollbar-track {
   background: none !important;
 }
 
-/* Apply gradient color to the navbar */
-.navbar,
-.viewed-cases .nav.nav-pills {
-	background-image: linear-gradient(to right, #051937, #004d7a, #008793) !important;
-}
+/* Change color of the tabs */
+/* .nav-tabs>li>a {
+  background-color: lightgray !important;
+} */
+
 
 /* Set background color for active tabs */
 .nav-pills > li.active > a,

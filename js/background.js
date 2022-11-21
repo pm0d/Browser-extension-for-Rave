@@ -24,17 +24,17 @@ function ravesearch(info) {
   chrome.tabs.query({ url: "https://rave.microsoft.com/*" }, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { casenumber: searchstring });
   });
-}
+};
 
 // Hide panels on switching to another support case
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  try {
-    if (changeInfo.url.startsWith("https://rave.microsoft.com/cases")) {
-      chrome.tabs.query({ url: "https://rave.microsoft.com/*" }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {message: "callfunc" });
-      });
-    }
-  } catch (error) {
-    // alert(error);
-  }
-});
+// chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+//   try {
+//     if (changeInfo.url.startsWith("https://rave.microsoft.com/cases")) {
+//       chrome.tabs.query({ url: "https://rave.microsoft.com/*" }, function (tabs) {
+//         chrome.tabs.sendMessage(tabs[0].id, {message: "callfunc" });
+//       });
+//     }
+//   } catch (error) {
+//     // alert(error);
+//   }
+// });
